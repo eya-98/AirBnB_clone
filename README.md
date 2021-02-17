@@ -10,6 +10,5 @@ Creating the console is the first step towards building a full web application: 
 ```$ ./console and enter command```
 ## **Current features** <h2>
 Run commands in $PATH
-## **Usage Examples** <h2>
 ## **Authors** <h2>
 Nani Eya & Benyahyaten Khalil
