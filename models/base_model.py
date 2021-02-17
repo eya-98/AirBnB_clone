@@ -32,6 +32,7 @@ class BaseModel:
         attribute updated_at with the current datetime
         """
         self.updated_at = datetime.now()
+        return self.updated_at
 
     def to_dict(self):
         """
