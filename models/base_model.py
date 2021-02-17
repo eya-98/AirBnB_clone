@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Holberton Module"""
 import uuid
+import FileStorage
 from datetime import datetime
 forma = "%Y-%m-%dT%H:%M:%S.%f"
 
@@ -31,6 +32,7 @@ class BaseModel:
         attribute updated_at with the current datetime
         """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """
