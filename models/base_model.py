@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Holberton Module"""
 import uuid
-import FileStorage
+from models.engine.file_storage import FileStorage
 from datetime import datetime
 forma = "%Y-%m-%dT%H:%M:%S.%f"
 
@@ -20,9 +20,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            models.storage.new(self)
-            models.storage.save()
-
+            
     def __str__(self):
         """print the id and the dict"""
         return ("[{}], ({}), {}".format(self.__class__.__name__,
@@ -34,7 +32,6 @@ class BaseModel:
         attribute updated_at with the current datetime
         """
         self.updated_at = datetime.now()
-        storage.save()
 
     def to_dict(self):
         """
