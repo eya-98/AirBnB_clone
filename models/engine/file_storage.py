@@ -30,6 +30,6 @@ class FileStorage:
         """deserializes the JSON file"""
         try :    
             with open(self.__file_path, 'r') as f:
-                objects_json = json.load(f)
+                self__objects = json.load(f)
         except:
             pass
