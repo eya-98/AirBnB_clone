@@ -1,16 +1,25 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Holberton Module"""
 
+import cmd
+from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     """define HBNBCOMMand as a class"""
-     def do_EOF(self, line):
+    prompt = '(hbnb)'
+
+    def do_EOF(self, line):
          """implement EOF method"""
          return True
 
-    def close(self):
-        """implement quit method"""
+    def do_exit(self, *args):
+        """implement quit"""
+        return True         
+    
 
-        if self.file:
-            self.file.close()
-            self.file = None
+    def emptyline(self):
+        """implement empty line"""
+        pass
+        
+    if __name__ == '__main__':
+        HBNBCommand().cmdloop()
