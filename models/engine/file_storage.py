@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """holberton Module"""
 import models
+from models.user import User
 import json
+
 
 class FileStorage:
     """define File storage class"""
     __file_path = "file.json"
     __objects = {}
-    
+
     def all(self):
         """ returns the dictionary __objects"""
         return self.__objects
@@ -28,7 +30,7 @@ class FileStorage:
 
     def reload(self):
         """deserializes the JSON file"""
-        try :    
+        try:
             with open(self.__file_path, 'r') as f:
                 self__objects = json.load(f)
         except:
