@@ -24,7 +24,7 @@ button:hover {
     display: inline-block;
     height: 100%;
     width: 25%;
-    border-right:  #DDDDDD solid 1px;
+    border-right: #DDDDDD solid 1px;
     text-align: center;
 }
 .locations h3{
@@ -48,15 +48,31 @@ button:hover {
     font-weight: 400;
     font-size: 14px;
 }
+.locations{
+border: #DDDDDD solid 1px;
+border-radius: 4px; 
+}
 .popover{
+    width: 15.5%;
+    display:none;
+    position: absolute;
     background-color: #FAFAFA;
-    width: inherit;
-    border: #DDDDDD solid 1px;
-    border-radius: 4px;
 }
 .location h2{
     font-size: 16px;
 }
-.popover:hover{
-    display: inline;
+.locations:hover .popover {
+display: block;
+}
+  
+.amenities:hover .popover {
+display: block;
+}
+.popover ul{
+list-style-type: none;
+text-align: left;
+}
+.popover li{
+list-style-type: none;
+text-align: left;
 }
